@@ -2,3 +2,6 @@ figure out routes for API calls to server and put in routes.rb
   mostly have them now
 
 come back and fix async issues with fetch in index.html.erb
+
+figure out what format backbone routers expect the controlled element to be in
+  what the routes look like as URLS
