@@ -1,0 +1,4 @@
+figure out routes for API calls to server and put in routes.rb
+  mostly have them now
+
+come back and fix async issues with fetch in index.html.erb
