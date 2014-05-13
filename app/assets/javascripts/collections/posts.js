@@ -1,10 +1,4 @@
-(function(root){
-  NS = root.NS = (root.NS || {});
-
-  var Posts = NS.Posts = Backbone.Collection.extend({
-    url: '/api/posts',
-    model: NS.Post
-  });
-
-
-})(this);
+Journalapp.Collections.Posts = Backbone.Collection.extend({
+  url: '/api/posts',
+  model: Journalapp.Models.Post
+});

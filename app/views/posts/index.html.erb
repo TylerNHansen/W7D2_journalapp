@@ -2,10 +2,3 @@
 
 <div id='postsIndex'>
 </div>
-
-<script>
-var posts = new NS.Posts();
-posts.fetch(); // fetch is async
-var postsIndex = new NS.PostsIndex({collection: posts});
-$('#postsIndex').html(postsIndex.$el);
-</script>
