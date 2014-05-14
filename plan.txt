@@ -5,3 +5,13 @@ come back and fix async issues with fetch in index.html.erb
 
 figure out what format backbone routers expect the controlled element to be in
   what the routes look like as URLS
+
+
+
+
+Edit form:
+  turn form into a js object using serialize on the form var
+  use that object to set the attributes on this.model
+  tell the model to save
+    on success, redirect back to index page
+    on failure, render the form with errors

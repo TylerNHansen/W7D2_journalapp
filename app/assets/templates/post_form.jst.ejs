@@ -1,0 +1,13 @@
+<form class='post-form' action="<%= '/api/posts/' + post.get('id') %>" method='post' accept-charset="utf-8">
+  <label>Title
+    <input type="text" name="post[title]" value="<%= post.get('title') %>">
+  </label>
+
+  <label>Body
+    <input type="text" name="post[body]" value="<%= post.get('body') %>">
+  </label>
+
+  <input type='hidden' name='_method' value='PUT'>
+
+  <p><input type="submit" value="Edit Post"></p>
+</form>

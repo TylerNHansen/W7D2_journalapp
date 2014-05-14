@@ -6,6 +6,7 @@ Journalapp.Routers.PostsRouter = Backbone.Router.extend({
   routes : {
     "":                 "index",    // #index
     "posts/:id":        "showpost", // #show a single post
+    "posts/:id/edit":   "editpost"
   },
 
   index: function() {
@@ -23,11 +24,16 @@ Journalapp.Routers.PostsRouter = Backbone.Router.extend({
 
   showpost: function(id) {
     // alert('I am the show')
-    var post = Journalapp.Collections.posts.get(parseInt(id));
+    var post = Journalapp.Collections.posts.getOrFetch(parseInt(id));
     // Journalapp.Models.Post.fetch()
     // post.fetch()
     var showPost = new Journalapp.Views.PostShow({model: post});
     this.$root.html(showPost.render().$el);
-  }
+  },
 
+  editpost: function(id) {
+    var post = Journalapp.Collections.posts.getOrFetch(parseInt(id));
+    var editPost = new Journalapp.Views.EditPostView({model: post})
+    this.$root.html(editPost.render().$el);
+  }
 });
